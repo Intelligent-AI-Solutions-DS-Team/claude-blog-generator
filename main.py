@@ -36,14 +36,17 @@ if submit:
             response = claude_api.send_message("Looks good! Make sure to incorporate anecdotes as well, and keep my writing style and tone as well from the given example blogs.", conversation_id)
             st.write("Writing final draft...")
             response = claude_api.send_message("Looks good! Now write me a final blog post that would be ready for posting", conversation_id)
-            st.write("Incoporating writing style and tone...")
-            response = claude_api.send_message("Make sure to incorporate the writing style and tone from the given blog posts in your draft.", conversation_id)
-            st.write("Writing final post...")
-            response = claude_api.send_message("Looks better! Now write me a final post for that particular blog that would be ready for publishing.", conversation_id)
             st.write("Blog post generated! 🎉")
         
         st.write(response)
-        
+        # prompt = st.text_input("Enter prompt here", placeholder="Enter modifications (shorten, elaborate, lengthen, etc.) here")
+        # submit_prompt = st.button("Modify")
+        # if submit_prompt:
+        #     if prompt:
+        #         respone = claude_api.send_message(prompt, conversation_id)
+        #         st.write(response)
+        #     else:
+        #         st.error("Please enter a prompt")
     else: 
         st.error("Please enter a blog title")
 
