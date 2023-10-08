@@ -27,7 +27,7 @@ if submit:
             st.write("Sending example blogs as reference...")
             response = claude_api.send_message("Here are the 22 example blogs that represent my writing:", conversation_id, attachment="rickblogs/Blog content.docx",timeout=600)
             st.write("Sending ebook as knowledge base...")
-            response = claude_api.send_message("Make sure to use this ebook in txt format as a knowledge base as well, but don't use it as a basis for the writing style and tone.", conversation_id, attachment="rickblogs\ebook - garment manufacturing.txt", timeout=600)
+            response = claude_api.send_message("Make sure to use this ebook in txt format as a knowledge base as well, but don't use it as a basis for the writing style and tone.", conversation_id, attachment="rickblogs/ebook - garment manufacturing.txt", timeout=600)
             st.write("Writing comprehensive guide on writing style and tone...")
             response = claude_api.send_message("Okay sounds good. Write me a comprehensive guide on my writing style and any additional insights you noticed on the way I write and how my tone is.", conversation_id)
             st.write("Writing initial draft...")
