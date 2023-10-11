@@ -1,0 +1,9 @@
+[[pages]]
+path = "main.py"
+name = "Blog Post Generator"
+icon = "📝"
+
+[[pages]]
+path = "pages/askrick.py"
+name = "Ask Rick Anything!"
+icon = "❓"

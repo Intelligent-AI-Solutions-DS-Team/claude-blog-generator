@@ -1,6 +1,14 @@
 from claude_api import Client
 import streamlit as st
+from st_pages import show_pages_from_config, add_page_title
+show_pages_from_config()
 claude_cookie = st.secrets["claude_cookie"]
+
+st.set_page_config(
+    page_title="Blog Post Generator",
+    page_icon="📝",
+)
+
 
 st.title("📝 Blog Post Generator")
 
