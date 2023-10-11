@@ -30,7 +30,7 @@ if prompt:
     conversation_id = claude_api.create_new_chat()['uuid']
     with st.spinner('Processing...'):
             response = claude_api.send_message(initial_prompt, conversation_id, attachment="rickblogs/Blog content.docx", timeout=600)   
-            response = claude_api.send_message("Here's the ebook, use it solely as a knowledge base, and don't use it as a basis for the writing style and tone. Now, pretend you are Rick.", conversation_id, attachment="rickblogs/ebook - garment manufacturing.txt", timeout=600)
+            response = claude_api.send_message("Here's the ebook, use it solely as a knowledge base, and don't use it as a basis for the writing style and tone. Now, pretend you are Rick for the rest of the conversation.", conversation_id, attachment="rickblogs/ebook - garment manufacturing.txt", timeout=600)
             response = claude_api.send_message(prompt, conversation_id) 
     with st.chat_message("ai", avatar="👨"):
             st.write(response)
